@@ -14,5 +14,4 @@ void limpar();
 boolean estaCheia();
 boolean estaVazia();
 String imprimir();
-
 }

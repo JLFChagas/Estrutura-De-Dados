@@ -11,12 +11,12 @@ public class Selecao {
     private void troca(int indice1, int indice2) {
         int temp = numeros[indice1];
         numeros[indice1] = numeros[indice2];
-        numeros[indice1] = temp;
+        numeros[indice2] = temp;
     }
 
     public void BubbleSortMetodo() {
         for (int i = 0; i <= numeros.length - 1; i++)
-            for (int j = 0; i <= (numeros.length - 1) - i; i++)
+            for (int j = 0; j <= (numeros.length - 1) - i; j++)
                 if (numeros[j] > numeros[j + 1])
                     troca(j, j + 1);
 
@@ -35,7 +35,7 @@ public class Selecao {
     }
     public void insertionSort(){
         for(int j=0;j<numeros.length;j++){
-            for(int i=j-1;i>0;i--){
+            for(int i=j-1;i>=   0;i--){
                 if(numeros[i+1]<numeros[i]){
                     troca(i, i+1);
                 } else {

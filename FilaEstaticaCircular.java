@@ -82,7 +82,7 @@ public Object desenfilerar(){
 public void enfileirar(Object dado){
      if(!estaCheia()){
         ponteiroFim=(ponteiroFim+1)%dados.length;
-        dados[ponteiroInicio]=dado;
+        dados[ponteiroFim]=dado;
         quantidade++;
     } else {
         System.err.println("queue  is empty");

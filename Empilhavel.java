@@ -1,10 +1,10 @@
-
-    public interface Empilhavel {
+    
+    public interface Empilhavel<T> {
         //métodos principais
-        void empilhar(Object dado);	//C
-        Object espiar();			//R
-        void atualizar(Object dado);//U
-        Object desempilhar();		//D
+        void empilhar(T dado);	//C
+        T espiar();			//R
+        void atualizar(T dado);//U
+        T desempilhar();		//D
         
         //métodos auxiliares
         boolean estaCheia();

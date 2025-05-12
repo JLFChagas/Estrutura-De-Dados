@@ -40,7 +40,7 @@ public class  ListaEstaticaCircular implements Listavel{
 		return (ponteiro+1)%dados.length;
 	}
     private int retroceder(int ponteiro) {
-		return (ponteiro-1)%dados.length;
+		return (ponteiro-1+dados.length)%dados.length;
 	}
     @Override
     public void anexar(Object dado) {
@@ -96,9 +96,17 @@ public class  ListaEstaticaCircular implements Listavel{
     }
 
     public int primeiraOcorrencia(Object dado){
+        int aux=-1;
         if(!estaVazia()){
-
-        }
+            for(int i=0;i<quantidade;i++){
+                if(dado.equals(dados[i])){
+                    aux=i;
+                    break;
+                }
+            }
+            
+        } 
+        return aux;
 
     }
     @Override
@@ -122,7 +130,7 @@ public class  ListaEstaticaCircular implements Listavel{
         if(!estaVazia()){
           
             if(posicao>=0&&posicao<quantidade){
-                int posicaoFisica=mapeamento(posicao)
+                int posicaoFisica=mapeamento(posicao);
                 int x=posicaoFisica;
                 dadoAux=dados[posicaoFisica];
                 int y=avancar(x);
@@ -139,22 +147,22 @@ public class  ListaEstaticaCircular implements Listavel{
         return dadoAux;
     }
     @Override
-    public void inserir(Object dado, int posicao) {
-        if(!estaCheia()){
-            if(posicao>=0&&posicao<quantidade){
-                int posicaoFisica=mapeamento(posicao);
-                int x=ponteiroFim;
-                int y=avancar(x);
-                for(int i=0;i<quantidade-posicao;i++){
-                    dados[x]=dados[y];
-                    x=retroceder(x);
-                    y=retroceder(y);
+        public void inserir(Object dado, int posicao) {
+            if(!estaCheia()){
+                if(posicao>=0&&posicao<quantidade){
+                    int posicaoFisica=mapeamento(posicao);
+                    int x=ponteiroFim;
+                    int y=avancar(x);
+                    for(int i=0;i<quantidade-posicao;i++){
+                        dados[y]=dados[x];
+                        x=retroceder(x);
+                        y=retroceder(y);
+                    }
+                    dados[posicaoFisica]=dado;
+                    quantidade++;
+                    avancar(ponteiroFim);
                 }
-                dados[posicaoFisica]=dado;
-                quantidade++;
-                avancar(ponteiroFim);
             }
+            
         }
-        
     }
-}
