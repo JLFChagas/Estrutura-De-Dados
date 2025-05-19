@@ -1,11 +1,17 @@
-public interface Enfileravel{
-void enfileirar(Object dado); // c create
-Object frente();                // r Front
-void atualizarInicio(Object dado);
-void atualizarFim(Object dado); // U update
-Object desenfilerar();          // d dequeue
+public interface Enfileravel<T>{
+    
+void enfileirarInicio(T dado); // c create
+void enfileirarFim(T dado);
+void atualizarInicio(T dado);
+void atualizarFim(T dado); // U update
+T desenfilerarInicio();          // d dequeue
+T desenfilerarFim();   
 
 boolean estaCheia();
 boolean estaVazia();
-String imprimir();
+String imprimirInicio();
+String imprimirFim();
+
+T tras();
+T frente();
 }
