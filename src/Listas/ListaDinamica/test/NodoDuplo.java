@@ -1,13 +1,13 @@
 
 public class NodoDuplo<T> {
-    private NodoDuplo<T> anteiror;
+    private NodoDuplo<T> anterior;
     private T dado;
     private NodoDuplo<T> proximo;
     public NodoDuplo(T dado) {
         this.dado = dado;
     }
     public NodoDuplo() {
-        
+            
     }
     public T getDado() {
         return dado;
@@ -15,11 +15,11 @@ public class NodoDuplo<T> {
     public void setDado(T dado) {
         this.dado = dado;
     }
-    public NodoDuplo<T> getAnteiror() {
-        return anteiror;
+    public NodoDuplo<T> getAnterior() {
+        return anterior;
     }
-    public void setAnteiror(NodoDuplo<T> anteiror) {
-        this.anteiror = anteiror;
+    public void setAnterior(NodoDuplo<T> anteiror) {
+        this.anterior = anteiror;
     }
     public NodoDuplo<T> getProximo() {
         return proximo;
