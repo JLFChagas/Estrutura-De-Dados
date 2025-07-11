@@ -6,8 +6,8 @@ import java.util.NoSuchElementException;
  * utilizando uma estrutura de nós duplamente encadeados.
  *
  * @param <T> o tipo dos elementos armazenados na pilha
- * @author Cláudio Rodolfo Sousa de Oliveira
- * @version 1.1
+ * @author João Lucas Fonseca Chagas
+ * @version 1.0
  * @since 2025-06-04
  */
 public class PilhaDinamicaGenerica<T> implements Empilhavel<T> {
@@ -51,7 +51,7 @@ public class PilhaDinamicaGenerica<T> implements Empilhavel<T> {
 			throw new NoSuchElementException("Pilha Cheia!");
 		}
 		NoDuplo<T> noTemporario = new NoDuplo<T>();
-		noTemporario.setDado(dado);
+			noTemporario.setDado(dado);
 		noTemporario.setAnterior(ponteiroTopo);
 		if (!estaVazia()) {
 			ponteiroTopo.setProximo(noTemporario);

@@ -6,8 +6,8 @@ import static org.junit.Assert.*;
  * Esta classe contém testes unitários para verificar o funcionamento
  * correto de todos os métodos da lista dinâmica genérica.
  * 
- * @author Claudio Rodolfo Sousa de Oliveira
- * @version 1.1
+ *  @author João Lucas Fonseca Chagas
+ * @version 1.0
  */
 public class ListaDinamicaGenericaTest {
 

@@ -6,7 +6,7 @@ import java.lang.reflect.Array;
  * Esta classe implementa uma estrutura de dados heap usando um array para armazenar os elementos.
  * Em um heap máximo, o elemento pai é sempre maior ou igual aos seus filhos.
  * 
- * @author Cláudio Rodolfo Sousa de         
+ * @author Cláudio Rodolfo Sousa de Oliveira
  * @version 1.0
  * @since 2025-06-04
  */
@@ -228,7 +228,7 @@ public class ArvoreBinariaHeapMaximo<T extends Priorizavel> implements Amontoave
 	 * Verifica se a heap está vazia.
 	 *
 	 * @return true se a heap estiver vazia, false caso contrário
-	 */ 
+	 */
 	@Override
     public boolean estaVazia() {
         return (ponteiroFim == -1);

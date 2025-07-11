@@ -4,8 +4,8 @@
  * utilizando uma estrutura de nós duplamente encadeados.
  *
  * @param <T> o tipo dos elementos armazenados na lista
- * @author Cláudio Rodolfo Sousa de Oliveira
- * @version 1.1
+ *  @author João Lucas Fonseca Chagas
+ * @version 1.0
  */
 public class ListaDinamicaGenerica<T> implements Listavel<T> {
 

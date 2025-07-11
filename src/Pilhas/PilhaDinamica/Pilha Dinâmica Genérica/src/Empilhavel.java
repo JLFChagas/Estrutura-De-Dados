@@ -4,8 +4,8 @@
  * por qualquer classe que represente uma estrutura de dados do tipo pilha.
  *
  * @param <T> o tipo dos elementos armazenados na pilha
- * @author Cláudio Rodolfo Sousa de Oliveira
- * @version 1.1
+ * @author João Lucas Fonseca Chagas
+ * @version 1.0
  * @since 2025-05-01
  */
 public interface Empilhavel<T> {
