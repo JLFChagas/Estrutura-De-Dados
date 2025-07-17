@@ -124,9 +124,9 @@ public class ABP<T extends Comparable<T>> implements Arborizavel<T> {
                 avo.setEsquerda(neto);
             } else {
                 avo.setDireita(neto);
-            }
+            }   
         }
-    }
+    }   
 
     private void apagarComDoisFilhos(NoTriplo<T> nodo) {
         //sucessor pode ser o menor a direita ou o maior a esquerda
@@ -149,7 +149,7 @@ public class ABP<T extends Comparable<T>> implements Arborizavel<T> {
         NoTriplo<T> noAuxiliar = nodo.getDireita();
         while (noAuxiliar.getEsquerda() != null)
             noAuxiliar = noAuxiliar.getEsquerda();
-
+        
         return noAuxiliar;
     }  
 
@@ -170,7 +170,7 @@ public class ABP<T extends Comparable<T>> implements Arborizavel<T> {
     public boolean existe(T dado) {
         return buscar(dado) != null;
     }
-
+    
     private NoTriplo<T> buscar(T dado) {
         NoTriplo<T> noAuxiliar = raiz;
         while (noAuxiliar != null) {
@@ -196,7 +196,7 @@ public class ABP<T extends Comparable<T>> implements Arborizavel<T> {
      * Retorna uma String com os elementos em ordem.
      * @return Elementos em ordem.
      */
-    @Override
+    @Override   
     public String imprimirEmOrdem() {
         return formataSaida(imprimirEmOrdemRec(raiz));
     }
