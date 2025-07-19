@@ -90,7 +90,7 @@ public class AVL<T extends Comparable<T>> implements Arborizavel<T> {
             else
                 T0.setDireita(x);
 
-        x.setGenitor(T0);
+        x.setGenitor(T0); 
 
         //[x-->y], [x<--y]
         x.setDireita(y);

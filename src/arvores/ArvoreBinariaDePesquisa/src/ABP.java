@@ -80,7 +80,7 @@ public class ABP<T extends Comparable<T>> implements Arborizavel<T> {
     public T apagar(T dado) {
         NoTriplo<T> noAuxiliar = buscar(dado);
         // Nó não encontrado na árvore
-        if (noAuxiliar == null)   
+        if (noAuxiliar == null) 
             return null;
 
         // Caso 1: Nó sem filhos

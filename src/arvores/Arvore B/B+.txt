@@ -1,0 +1,19 @@
+Definição
+
+Uma árvore B+ é uma estrutura de dados em árvore que organiza os dados de forma hierárquica, garantindo que todas as chaves de dados reais estejam armazenadas apenas nos nós folha. Os nós internos (não-folha) funcionam como um índice, contendo cópias das chaves para guiar a busca, mas não os dados em si. As folhas, por sua vez, são interligadas por ponteiros, formando uma lista encadeada, o que facilita buscas sequenciais e de intervalo.
+
+Propriedades Essenciais
+
+As árvores B+ herdam algumas propriedades das árvores B e adicionam características que otimizam seu desempenho para aplicações de banco de dados:
+
+    Nós Internos (Não-Folha): Contêm apenas chaves de índice e ponteiros para os próximos níveis da árvore. Eles não armazenam os registros de dados completos. Isso permite que um nó interno armazene um maior número de chaves, diminuindo a altura da árvore e, consequentemente, o número de acessos ao disco para encontrar um dado.
+
+    Nós Folha: Contêm todas as chaves e seus respectivos registros de dados (ou ponteiros para os registros de dados). Todas as chaves em uma árvore B+ eventualmente aparecem em um nó folha.
+
+    Encadeamento das Folhas: Todos os nós folha são interligados em uma lista encadeada da esquerda para a direita. Essa conexão é crucial para buscas por intervalo, pois uma vez que a primeira chave do intervalo é encontrada, basta seguir os ponteiros da lista para acessar as chaves subsequentes sem ter que subir e descer na árvore.
+
+    Todas as Folhas Estão no Mesmo Nível: Assim como nas árvores B, todas as folhas de uma árvore B+ estão na mesma profundidade, garantindo que as buscas por qualquer elemento tenham um custo uniforme.
+
+    Número Mínimo e Máximo de Chaves e Filhos: As regras sobre o número mínimo e máximo de chaves e filhos por nó (baseadas na ordem da árvore) são semelhantes às das árvores B, garantindo o balanceamento da estrutura durante inserções e exclusões.
+
+    Chaves Duplicadas (em Nós Internos): Uma chave pode aparecer em um nó interno e também em um nó folha. A chave no nó interno serve como um guia de pesquisa, enquanto a chave no nó folha representa o dado real.

@@ -1,0 +1,20 @@
+
+Definição
+
+Uma árvore B é uma estrutura de dados de árvore de busca auto balanceada que mantém os dados classificados e permite buscas, inserções e exclusões em tempo logarítmico. Diferentemente das árvores binárias de busca, as árvores B podem ter mais de duas ramificações por nó, o que as torna ideais para sistemas de armazenamento que leem e escrevem blocos de dados grandes.
+
+Propriedades Essenciais
+
+As árvores B possuem algumas propriedades fundamentais que garantem sua eficiência e balanceamento:
+
+    Ordem (ou Grau) m: Cada nó de uma árvore B tem um número máximo de filhos, conhecido como sua ordem m. Isso significa que cada nó pode ter até m−1 chaves.
+
+    Todos os Nós Folha Estão no Mesmo Nível: Esta é uma propriedade crucial que garante que a árvore esteja sempre balanceada. Todas as folhas da árvore B estão à mesma profundidade, o que otimiza o tempo de busca, pois a distância de qualquer busca até uma folha é sempre a mesma.
+
+     Exceto pela raiz, todos os nós devem ter pelo menos m/2 chaves e m/2+1 filhos (arredondado para cima).
+
+     A raiz, se não for uma folha, deve ter pelo menos 2 filhos. Se a raiz for uma folha (ou seja, a árvore tem apenas um nó), ela pode ter entre 0 e m−1 chaves.
+
+    Chaves Ordenadas Dentro dos Nós: As chaves em cada nó são armazenadas em ordem crescente. Isso facilita a busca e a navegação dentro do próprio nó.
+
+    Separação de Subárvores: As chaves em cada nó atuam como valores de separação que dividem o espaço de chaves em sub-intervalos para as subárvores. Ou seja, todas as chaves na subárvore à esquerda de uma chave K são menores que K, e todas as chaves na subárvore à direita são maiores que K.
